@@ -24,7 +24,16 @@ header .top-header{
     padding-top: 15px;
     padding-bottom: 15px;
     height: 50px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+
     position: relative;
+
 }
 
 header .logo {
@@ -55,7 +64,6 @@ header .phone-ico {
     margin-top: 15px;
     
 }
-
 
 header .phone-number {
     float: right; 
@@ -103,11 +111,7 @@ header .shop-cart-button {
     vertical-align: middle;
     cursor: pointer;
 
-    transition: color 350ms ease;
-}
-header .shop-cart-button:hover,
-header .shop-cart-button.active{
-    color: #d23535;
+    transition: color, transform 350ms ease;
 }
 
 header .shop-cart-counter {
@@ -124,25 +128,149 @@ header .shop-cart-counter {
     vertical-align: middle;
     position: absolute;
     top: 20px;
-    right: 7px;
+    right: 10px;
+
+    transition: transform 350ms ease;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
 
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
 }
 
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #d23535;
+    transform: scale(1.2);
+}
+
+header .shop-cart-button:hover + .shop-cart-counter,
+header .shop-cart-button.active + .shop-cart-counter{
+    transform: scale(1.2);
+}
+
 header .shop-cart-form {
     position: absolute;
-    top: 50px;
-    right: 15px;
-    width: 450px;
+    top: 70px;
+    right: 0px;
+    width: 400px;
     min-height: 100px;
-    background: #d1d1d1;
+    max-height: 550px;
+    padding: 15px;
+    background: #ffffff;
+    overflow: scroll;
+    scrollbar-color: rgb(18,36,54, 1), rgba(44,91,138,1);
+    scrollbar-width: thin;
+
     
+    z-index: 1000;
+
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
+
+header .shop-cart-form .item {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 5px;
+    float: left;
+
+}
+header .shop-cart-form .item-block-img {
+    width: 100px;
+    height: 100px;
+    background-color: #ffff;
+    display: table;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    float: left;
+}
+
+header .shop-cart-form .item-img {
+    width: 100%;
+    display: table-cell;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+}
+header .shop-cart-form .item img {
+    max-height: 90px;
+    max-width: 90px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+header .shop-cart-form .item-caption {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 10px;
+    width: 260px;
+    line-height: 14px;
+    text-align: left;
+    float: left;
+}
+header .shop-cart-form .item-price {
+    margin-top: 20px;
+    margin-right: 15px;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+header .shop-cart-form .item-trash-ico {
+    width: 15px;
+}
+
+header .shop-cart-form .item-price-b {
+    color: #ff5a1f;
+    margin-right: 35px;
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+header .shop-cart-form .item-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 45px;
+    width: 75px;
+}
+
+header .shop-cart-form .item-count {
+    font-size: 14px;
+}
+header .shop-cart-form .item-plus-minus {
+    background: #fb936e;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+header .shop-cart-form .item-count input  {
+    width: 30px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+
 
 header .presentation {
     margin: 0 0 50px 0;

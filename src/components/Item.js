@@ -16,10 +16,8 @@ export class Item extends Component {
                 </div>
                 <div className = "item-price">
                     <div className = "item-price-b">{this.props.item.price} ₽</div>
-                    <div className = 'add-to-cart'>Купить</div>
+                    <div className = 'add-to-cart' onClick={() => this.props.onAdd(this.props.item)}>Купить</div>
                 </div>
-                
-                
             </div>
         )
     }

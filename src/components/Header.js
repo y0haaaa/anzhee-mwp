@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
+import Order from './Order';
 
-export default function Header() {
+export default function Header(props) {
 
     let [cartOpen, setCartOpen] = useState(false)
 
@@ -18,14 +19,18 @@ export default function Header() {
                     <FaPhone className='phone-ico' />
                     <span className='phone-number'>8 (800) 505-70-45</span>
                 </div>
-                <div className='shop-cart'>
-                    <FaCartShopping onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`}/>
-                    <div className='shop-cart-counter'>1</div>
+                <div onClick={() => setCartOpen(cartOpen = !cartOpen)} className='shop-cart'>
+                    <FaCartShopping className={`shop-cart-button ${cartOpen && 'active'}`}/>
+                    <div className='shop-cart-counter'>5</div>
                     {cartOpen &&(
-                        <div className='shop-cart-form'></div>
+                        <div className='shop-cart-form'>
+                            {props.orders.map(el => (
+                                <Order key={el.id} item={el}/>
+                            ))}
+                        </div>
                     )}
                 </div>
-                
+
                 <ul className = 'nav'>
                     <li>Каталог</li>
                     <li>Контакты</li>

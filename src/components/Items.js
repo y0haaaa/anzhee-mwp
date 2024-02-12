@@ -8,7 +8,7 @@ export class Items extends Component {
                 <span>Каталог</span>
                 <div className = 'sharp-item'>
                     {this.props.items.map(el => (
-                        <Item key = {el.id} item = {el}/>
+                        <Item key = {el.id} item = {el} onAdd={this.props.onAdd}/>
                     ))}
                 </div>
                 
