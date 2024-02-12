@@ -1,13 +1,416 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    min-width: 1280;
+    background-color: #ffff; 
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0px auto;
+}
+
+
+
+header .top-header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 50px;
+    position: relative;
+}
+
+header .logo {
+    float: left;
+    width: auto;
+    height: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+header .logo img {
+    width: 100%;
+    height: 50px;
+    float: left;
+}
+
+header .phone{
+    float: left;
+    line-height: 50px;
+    vertical-align: middle;
+    margin-left: 300px;
+}
+header .phone-ico {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 15px;
+    
+}
+
+
+header .phone-number {
+    float: right; 
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 15px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+    margin-right: 30px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 300ms ease;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+header ul.nav li:hover {
+    opacity: 50%;
+}
+
+header .shop-cart {
+    float: right;
+    /* position: relative; */
+}
+
+header .shop-cart-button {
+    margin-top: 10px;
+    margin-right: 15px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    line-height: 100px;
+    color: rgb(18, 36, 54);
+    vertical-align: middle;
+    cursor: pointer;
+
+    transition: color 350ms ease;
+}
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+    color: #d23535;
+}
+
+header .shop-cart-counter {
+    color: #ffffff;
+    background-color: #ff5a1f;
+    border-radius: 50px;
+    float: right;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    position: absolute;
+    top: 20px;
+    right: 7px;
+
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
+}
+
+header .shop-cart-form {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    width: 450px;
+    min-height: 100px;
+    background: #d1d1d1;
+    
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+header .presentation {
+    margin: 0 0 50px 0;
+    background: url('./img/bg_header.png');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #bcbcbb;
+    border-radius: 20px;
+    position: relative;
+}
+
+header .presentation::after {
+    content: 'Профессиональное световое и звуковое оборудование';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffff
+}
+
+header .presentation::before {
+    content: 'Решим вашу задачу за 24 часа';
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 300px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #d1d1d1
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main span {
+    font-size: 30px;
+    font-weight: 600;
+    display: table;
+    margin: 30px auto;
+}
+
+main .sharp-item{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 22%;
+    height: 500px;
+    margin-bottom: 50px; 
+    margin-left: 5px;
+    margin-right: 5px;  
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
+}
+
+main .item-block-img {
+    width: 100%;
+    height: 250px;
+    background-color: #ffff;
+    display: table;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+main .item-img {
+    width: 100%;
+    height: 250px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+main .item img {
+    max-height: 250px;
+    max-width: 250px;
+    vertical-align: middle;
+    text-align: center;
+    transition: transform 350ms ease;
+}
+
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+
+main h2, main p, main b {
+    margin: 10px 20px;
+    color: rgb(18, 36, 54)
+}
+
+
+main h2 {
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px !important
+}
+main p {
+    color: black;
+    font-size: 12px;
+    height: 115px;
+}
+
+main .item-price {
+    margin-top: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 35px;
+    background-color: rgba(25, 49, 73, 0.927);
+    border-radius: 10px;
+    
+
+}
+main .item-price-b {
+    float: left;
+    margin-left: 15px;
+    color: #ffff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+main .add-to-cart {
+    float: right;
+    line-height: 35px;
+    vertical-align: middle;
+    background: rgb(18,36,54);
+    background: linear-gradient(-90deg, rgba(18,36,54,1) 3%, rgba(44,91,138,1) 100%);
+    color: #ffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    width: 110px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 26px;
+    right: 15px;
+    cursor: pointer;
+
+    transition: width 0.7s ease;
+}
+
+main .add-to-cart:hover {
+    position: absolute;
+    width: 238px;
+
+}
+
+.about-container {
+    
+    margin-bottom: 50px;
+    padding: 15px 15px;
+    background: rgb(18,36,54);
+    background: linear-gradient(140deg, rgba(18,36,54,1) 40%, rgba(44,91,138,1) 100%);
+    height: 400px;
+    position: relative;
+    border-radius: 120px 0px 120px 0px;
+    overflow: hidden;
+
+
+}
+.about-container h2, .about-container p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 20px;
+    opacity: 100%;
+    border: #222;
+
+}
+
+.about-container h2 {
+    font-weight: 600;
+    font-size: 36px;
+    margin-left: 30px;
+}
+
+.about-png {
+    background: url('./img/about_setkaaa.png');
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+}
+
+.feedback-title {
+    font-weight: 600;
+    font-size: 30px;
+    margin: 50px auto 20px;
+}
+
+.feedback-input {
+    margin: 10px auto;
+    width: 30%;
+    height: 30px;
+    border-color: #222;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+
+}
+
+.rules {
+    margin: 0 0 50px 0;
+}
+.rules h2{
+    margin-left: 35px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.rules-sharp {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.rules-item img {
+    height: 130px;
+    width: 270px;
+}
+
+.rules-item {
+    height: 140px;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+footer {
+    text-align: center;
+    margin-top: 100px;
 }
