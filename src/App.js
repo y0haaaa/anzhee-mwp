@@ -64,12 +64,16 @@ class App extends React.Component {
     render() {
         return (
         <div className = 'wrapper'>
-            <Header orders={this.state.orders } />
-            <Items items = {this.state.items} onAdd={this.addToOrder}/>
-            <About />
-            <Rules />
-            <Feedback />
-            <Footer />
+            <div className = 'container'>
+            
+                <Header orders={this.state.orders } />
+                <Items items = {this.state.items} onAdd={this.addToOrder}/>
+                <About />
+                <Rules />
+                <Feedback />
+                <Footer />
+                
+            </div>
         </div>
         );
     };
