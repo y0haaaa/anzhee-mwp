@@ -2,17 +2,16 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div className = 'about-container'>
-            <div className = "about-png"></div>
-            <h2>О компании</h2>
-            <p>Сотрудники компании «Anzhee» — это команда профессионалов, четко знающая свое дело и не желающая стоять на месте. Каждый сотрудник компании является главным звеном в реализации нашей стратегии.
-Мы очень ответственно относимся к выпускаемой нами продукции, и каждому, кто имеет к этому отношение.</p>
-            <p>Мы всегда рады пополнять наши ряды как высококвалифицированными профессионалами,
-так и перспективными «новичками», обучать их тому, что знаем сами, а возможно, и чему-то учиться у них. </p>
-            <p>Чтобы наши сотрудники развивались не только профессионально, но имели возможность материального роста, мы готовы предоставить все условия, чтобы Вы могли успешно работать и достойно зарабатывать.</p>
-            <p className = 'about-last-words'>Мы постоянно растем и развиваемся. Основные успехи на рынке достигаются засчет сплоченной работы нашей команды. Внутри компании запущенны процессы постоянного улучшения профессиональных навыков, такие как внутренние обучения или с помощью различных курсов по hard или soft skills, совместные тимбилдинги
-и стратегические сессии.</p>
-            
-        </div>
+        <div className='about-us'>
+            <div className='about-us-photo'>
+            </div>
+            <div className='about-us-text'>
+                <h2>About us</h2>
+                <a>
+                    Anzhee Company offers a wide range of stage lighting and sound equipment for a whole variety of applications. We provide more than 300 carefully selected, verified products under our own brands Anzhee and PROCBET. In our catalogue you will find everything you need for your project: moving heads, theatrical and studio lighting, LED PAR and BAR lights, controllers, consoles, special effects and more.
+Anzhee engineers have developed a special test system of more than 70 points, so that you can always be confident about the quality of the shipped product.
+                </a>
+            </div>
+    </div>
     )
 }
