@@ -3,15 +3,16 @@ import Item from './Item'
 
 export class Items extends Component {
       render() {
+        
         return (
-            <main id='catalogue'>
-                <span>Catalogue</span>
-                <div className = 'sharp-item'>
+            <div className='items'>
+                <h2>CATALOGUE</h2>
+                <div className = 'items-sharp'>
                     {this.props.items.map(el => (
-                        <Item key = {el.id} item = {el} onAdd={this.props.onAdd}/>
+                        <Item key = {el.id} item = {el}/>
                     ))}
                 </div>
-            </main>
+            </div>
         )
     }
 }

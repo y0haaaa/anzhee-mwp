@@ -14,10 +14,10 @@ export class Item extends Component {
                     <h2>{this.props.item.title}</h2>
                     <p>{this.props.item.desc}</p>
                 </div>
-                <div className = "item-price">
+                {/* <div className = "item-price">
                     <div className = "item-price-b">{this.props.item.price} ₽</div>
                     <div className = 'add-to-cart' onClick={() => this.props.onAdd(this.props.item)}>Подробнее</div>
-                </div>
+                </div> */}
             </div>
         )
     }

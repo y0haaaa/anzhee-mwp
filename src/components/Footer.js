@@ -8,8 +8,8 @@ export default function Footer() {
     return (
       <footer id = 'contacts'>
           <div className='footer-sharp'>
-            <h2>Contact us</h2>
-            <p>You can ask questions and order an equipment by phone, mail or on our social networks</p>
+            <h2>CONTACT US</h2>
+            <p>Please contact us by phone, mail or on our social media if you have any questions regarding our equipment or to make and order</p>
             <p className='footer-contact'>+971 050 743 2895</p>
             <p className='footer-contact'>SALE@ANZHEE.AE</p>
           </div>

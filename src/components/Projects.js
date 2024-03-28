@@ -3,7 +3,7 @@ import React from 'react'
 export default function Projects() {
   return (
     <div className='project'>
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
         <div className='project-sharp'>
             <div className='project-item-1'></div>
             <div className='project-item-2'></div>
