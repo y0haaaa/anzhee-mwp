@@ -20,7 +20,7 @@ body {
 }
 .container {
     margin: 0px auto;
-    max-width: 100% !important;
+    max-width: 1920px !important;
     padding: 0 !important;
 }
 
@@ -495,9 +495,6 @@ header .menu.active {
     }
 }
 
-.features {
-}
-
 .features-title {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -523,15 +520,14 @@ header .menu.active {
     align-content: space-between;
     justify-content: space-between;
 }
-.features-item:not(:first-child) {
-    margin-top: 10px;
-}
+
 .features-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
+}
+.features-item-left {
+    flex-direction: row-reverse;
 }
 .features-item-txt {
     display: flex;
@@ -743,7 +739,7 @@ header .menu.active {
 .items {
     margin-left: 20px;
     margin-right: 20px;
-    background-color: rgb(245, 245, 245);
+    
 }
 
 .items h2 {
@@ -763,13 +759,13 @@ header .menu.active {
 
 .item {
     width: 250px;
-    height: 500px;
+    height: 475px;
     margin-bottom: 50px; 
     margin-left: 5px;
     margin-right: 15px;
     position: relative;
     background-color: #ffffff;
-    border-radius: 10px 10px 10px 10px;
+    
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.12);
@@ -811,8 +807,7 @@ header .menu.active {
 }
 
 .item h2, .item p, .item b {
-    margin: 10px 20px;
-    color: rgb(18, 36, 54)
+    color: black;
 }
 
 
@@ -821,30 +816,32 @@ header .menu.active {
     font-weight: 600;
     height: 50px !important;
     text-align: left;
+    margin: 5px 10px 5px 10px;
 }
 .item p {
     color: black;
     font-size: 12px;
-    height: 150px;
+    height: 140px;
+    margin: 5px 10px 5px 10px;
+    overflow: hidden;
 }
 
 .item-price {
-    margin-top: 18px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 35px;
-    background-color: rgba(25, 49, 73, 0.927);
-    border-radius: 10px;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    
 }
 .item-price-b {
-    float: left;
-    margin-left: 15px;
+    float: right;
+    padding: 5px 15px;
     color: #ffff;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 35px;
-    vertical-align: middle;
+    background-color: rgba(25, 49, 73, 0.927);
+    border-radius: 15px;
+    
 }
 
 .add-to-cart {
@@ -880,6 +877,7 @@ header .menu.active {
 
 .project {
     padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 .project h2 {
@@ -887,6 +885,7 @@ header .menu.active {
     text-align: center;
     font-weight: 600;
     font-size: 48px;
+    
 
 }
 
@@ -896,9 +895,7 @@ header .menu.active {
     flex-wrap: wrap;
     justify-content: center;
 }
-.project-item {
-    
-}
+
 .project-item-1 {
     background: url('./img/project/1.jpg');
 }
@@ -932,11 +929,131 @@ header .menu.active {
 }
 
 
+.form {
+    margin: 0px 0 50px 0;
+    
+}
+
+
+
+.form h2{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    padding: 50px 0 30px 0;
+}
+
+.form-blocks{
+    display: flex;
+    justify-content: center;
+}
+
+.form-block {
+    margin-top: 25px;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    width: 700px
+    
+}
+
+.form-block-input {
+    margin-top: 10px;
+    height: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 0.25rem;
+}
+
+.form-block-file {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.form-file {
+    margin-top: 20px;
+    width: 90%;
+    
+}
+
+.form-file p {
+    font-size: 16px;
+    display: inline;
+}
+.form-file input {
+    display: inline;
+    margin-left: 20px;
+}
+
+.form-block-checkbox input {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-block-checkbox input:checked {
+    background-color: rgb(103, 161, 210);
+    border-radius: 50%;
+}
+
+.form-button {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(18,36,54);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+.form-button:hover {
+    transform: scale(1.1)
+}
+
+@media screen and (min-width: 1400px) {
+    .form-block-input{
+        
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    
+}
+
+@media screen and (max-width: 992px) {
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+    .form-block {
+        width: 90%;
+        margin-left: 0;
+    }
+    
+}
+
+
+
 
 footer {
     text-align: center;
-    width: 50%;
-    margin: 100px auto;
+    width: 60%;
+    margin: 50px auto 0px auto;
 }
 footer h2 {
     font-weight: 600;
@@ -960,17 +1077,34 @@ footer p {
 }
 .footer-ico {
     display: block;
+    
 }
 
 .footer-ico a svg {
     width: 52px;
     height: 100%;
     margin: 20px 10px;
-    color: black;
+    color: red;
+    transition: transform 350ms ease;
+}
+.footer-ico a svg:hover{
+    transform: scale(1.1);
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 1200px){
+    footer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 992px){
     footer {
         width: 85%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    footer {
+        width: 90%;
     }
 }

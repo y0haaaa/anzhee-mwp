@@ -25,7 +25,7 @@ export default function Features() {
                         <img src='./img/features/1photo.jpeg' alt='1_photo'></img>
                     </div>
                 </div>
-                <div className='features-item'>
+                <div className='features-item features-item-left'>
                     <div className='features-item-txt'>
                         <div className='features-item-ico'>
                             <img src='./img/features/2_2_ico.png' alt='2_2_ico'/>
@@ -62,7 +62,7 @@ export default function Features() {
                         <img src='./img/features/2photo.jpeg' alt='2_photo'></img>
                     </div>
                 </div>
-                <div className='features-item'>
+                <div className='features-item features-item-left'>
                     <div className='features-item-txt'>
                         <div className='features-item-ico'>
                             <img src='./img/features/3_ico.png' alt='3_ico'/>
@@ -97,7 +97,7 @@ export default function Features() {
                         <img src='./img/features/3_2photo.jpeg' alt='4_photo'></img>
                     </div>
                 </div>
-                <div className='features-item'>
+                <div className='features-item features-item-left'>
                     <div className='features-item-txt'>
                         <div className='features-item-ico'>
                             <img src='./img/features/4_ico.png' alt='4_ico'/>

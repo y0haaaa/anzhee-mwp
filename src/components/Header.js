@@ -11,7 +11,7 @@ export default function Header() {
             <header>
                 <div className='top-header'>
                     <div className = 'logo'>
-                        <a href = 'https://anzhee.ru/' target="_blank">
+                        <a href = '/' target="_blank">
                             <img src = './img/anzee_blue_logo.png' alt='logo'></img>
                         </a>
                     </div>
